@@ -1,0 +1,73 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestCommerciale"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:dxdove="http://schemas.devexpress.com/winfx/2008/xaml/docking/visualelements" x:Name="main_window" x:Class="GestCommerciale.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="840" Width="1185" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="135*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DockPanel x:Name="pnl_container" Grid.RowSpan="2" Margin="281,63,0,0" Grid.ColumnSpan="1">
+            <DockPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFC5C5C5" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </DockPanel.Background>
+        </DockPanel>
+        <DockPanel x:Name="pnl_sidebar" LastChildFill="False" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Grid.RowSpan="2" Margin="0,60,0,0" HorizontalAlignment="Left" Width="280">
+            <DockPanel x:Name="pnl_image_cont" LastChildFill="False" Background="#FFE8E8E8" DockPanel.Dock="Top" Height="200" Margin="16,15,16,0">
+                <Image Width="220" DockPanel.Dock="Top" Height="164" Margin="0,10,0,0"/>
+                <Label Content="Admin" Cursor="None" FontFamily="Bahnschrift Light Condensed" HorizontalContentAlignment="Center" FontSize="14" DockPanel.Dock="Bottom" Height="17" Padding="0,0,0,0" Margin="0,5,0,5"/>
+            </DockPanel>
+            <StackPanel x:Name="pnl_items_cont" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" DockPanel.Dock="Top" Height="503" CanVerticallyScroll="True" CanHorizontallyScroll="True" Margin="16,20,16,0">
+                <dx:SimpleButton Content="Accuiel" Height="50" Margin="7,5,7,0" Width="NaN" Click="SimpleButton_Click_3" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Address.svg}" GlyphWidth="35" GlyphHeight="35" Interval="32" GlyphToContentOffset="10" FontFamily="Segoe UI"/>
+                <dx:SimpleButton Content="Catégories" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Dashboards/ShowLegend.svg}"/>
+                <dx:SimpleButton Content="&#xA;Fournisseurs&#xA;" Height="50" Margin="7,5,7,0" Click="SimpleButton_Click_4" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Position.svg}"/>
+                <dx:SimpleButton Content="Achats" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Sale_Item.svg}" GlyphToContentOffset="25" Interval="2"/>
+                <dx:SimpleButton Content="Clients" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Department.svg}" GlyphToContentOffset="20"/>
+                <dx:SimpleButton Content="Ventes" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Sale.svg}" GlyphToContentOffset="20"/>
+                <dx:SimpleButton Content="Rapports" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Report.svg}" GlyphToContentOffset="10"/>
+                <dx:SimpleButton Content="Utilisateurs" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Business Objects/BO_User.svg}"/>
+                <dx:SimpleButton Content="Paramètres" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Settings.svg}"/>
+            </StackPanel>
+        </DockPanel>
+        <DockPanel x:Name="pnl_topbar" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" LastChildFill="False">
+            <dx:SimpleButton Content="" Width="38" DockPanel.Dock="Right" Margin="0,3,5,3" Glyph="{dx:DXImage SvgImages/RichEdit/CloseHeaderAndFooter.svg}" Height="25" Click="SimpleButton_Click_1"/>
+            <dx:SimpleButton Content="" DockPanel.Dock="Right" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Window.svg}" Width="38" Margin="0,3,5,3" Height="25" Click="SimpleButton_Click"/>
+            <dx:SimpleButton Content="" DockPanel.Dock="Right" Glyph="{dx:DXImage SvgImages/Dashboards/ShowLegendOutsideVerticalBottomLeft.svg}" Width="37" Height="25" Margin="0,3,5,3" Click="SimpleButton_Click_2"/>
+            <dx:SimpleButton Content="" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Notifications.svg}" Width="38" Height="25" DockPanel.Dock="Right" Margin="0,3,25,3"/>
+            <Label Content="Accuiel" FontSize="18" Cursor="None" FontFamily="Cascadia Code" Height="26.917" HorizontalContentAlignment="Center" DockPanel.Dock="Right" VerticalContentAlignment="Center" Margin="0,0,300,0"/>
+        </DockPanel>
+        <DockPanel x:Name="pnl_mini_topbar" LastChildFill="False" Background="#FFE5E5E5" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="280">
+            <DockPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.493"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.431"/>
+                </TransformGroup>
+            </DockPanel.RenderTransform>
+            <dx:SimpleButton x:Name="collapse_btn" Content="" Glyph="{dx:DXImage SvgImages/Outlook Inspired/List.svg}" Padding="4,3,3,3" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Width="30" Margin="17,10,0,15" Height="30" Click="SimpleButton_Click_5"/>
+            <Label Content="GestCOM" FontSize="24" Cursor="None" FontFamily="Unispace" FontWeight="DemiBold" FontStyle="Italic" Padding="0,0,0,0" DockPanel.Dock="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="49" Margin="0,7,26,0">
+                <Label.Foreground>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF303B45" Offset="0.073"/>
+                        <GradientStop Color="#FFF6BF11" Offset="0.918"/>
+                        <GradientStop Color="#FFE3B920" Offset="0.129"/>
+                    </RadialGradientBrush>
+                </Label.Foreground>
+            </Label>
+        </DockPanel>
+
+
+    </Grid>
+</Window>
