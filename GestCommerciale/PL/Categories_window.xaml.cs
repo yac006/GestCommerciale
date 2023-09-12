@@ -22,7 +22,7 @@ namespace GestCommerciale.PL
     {
         public Categories_window()
         {
-            InitializeComponent();
+            InitializeComponent(); //My comment
         }
     }
 }
