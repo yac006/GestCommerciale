@@ -25,6 +25,7 @@ namespace GestCommerciale
     {
         //Déclaration des objets 
         Accuiel_window accuiel_Window = new Accuiel_window();
+        Categories_window categories_window = new Categories_window();
         
 
         public MainWindow()
@@ -63,11 +64,6 @@ namespace GestCommerciale
         {
             pnl_container.Children.Clear();
             pnl_container.Children.Add(accuiel_Window);
-            /*accuiel_Window.Width = 905;
-            accuiel_Window.Height = 777;*/
-
-
-
 
         }
 
@@ -98,6 +94,12 @@ namespace GestCommerciale
                 margin.Left = 281;
                 pnl_container.Margin = margin;
             }
+        }
+        //Charger la page "Categories"
+        private void SimpleButton_Click_6(object sender, RoutedEventArgs e)
+        {
+            pnl_container.Children.Clear ();
+            pnl_container.Children.Add(categories_window);
         }
     }
 }

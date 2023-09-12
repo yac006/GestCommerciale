@@ -30,7 +30,7 @@
             </DockPanel>
             <StackPanel x:Name="pnl_items_cont" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" DockPanel.Dock="Top" Height="503" CanVerticallyScroll="True" CanHorizontallyScroll="True" Margin="16,20,16,0">
                 <dx:SimpleButton Content="Accuiel" Height="50" Margin="7,5,7,0" Width="NaN" Click="SimpleButton_Click_3" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Address.svg}" GlyphWidth="35" GlyphHeight="35" Interval="32" GlyphToContentOffset="10" FontFamily="Segoe UI"/>
-                <dx:SimpleButton Content="Catégories" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Dashboards/ShowLegend.svg}"/>
+                <dx:SimpleButton Content="Catégories" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Dashboards/ShowLegend.svg}" Click="SimpleButton_Click_6"/>
                 <dx:SimpleButton Content="&#xA;Fournisseurs&#xA;" Height="50" Margin="7,5,7,0" Click="SimpleButton_Click_4" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Position.svg}"/>
                 <dx:SimpleButton Content="Achats" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Sale_Item.svg}" GlyphToContentOffset="25" Interval="2"/>
                 <dx:SimpleButton Content="Clients" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Department.svg}" GlyphToContentOffset="20"/>

@@ -139,10 +139,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PL\Categories_window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PL\Accuiel_window.xaml.cs">
       <DependentUpon>Accuiel_window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Categories_window.xaml.cs">
+      <DependentUpon>Categories_window.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
