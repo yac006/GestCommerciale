@@ -98,9 +98,18 @@
     <Reference Include="DevExpress.Xpf.Themes.Win10Light.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpf.Themes.Win11Dark.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpf.Themes.Win11Light.v23.1, Version=23.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -123,6 +132,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BL\Methods.cs" />
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Fenêtres\Ajouter_cat_wind.xaml.cs">
+      <DependentUpon>Ajouter_cat_wind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Toast_Notifications\Toast_notif.xaml.cs">
+      <DependentUpon>Toast_notif.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Table_Categories.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -143,8 +167,26 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PL\Fenêtres\Ajouter_cat_wind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PL\Toast_Notifications\Toast_notif.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
     <Compile Include="PL\Accuiel_window.xaml.cs">
       <DependentUpon>Accuiel_window.xaml</DependentUpon>
     </Compile>
@@ -169,6 +211,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -177,44 +227,57 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="BL\" />
+    <Resource Include="PL\img\icons8-grid-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PL\icons8-grid-32.png" />
+    <Resource Include="PL\img\icons8-total-sales-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PL\icons8-total-sales-32.png" />
+    <Resource Include="PL\img\icons8-shopping-bag-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PL\icons8-shopping-bag-32.png" />
+    <Resource Include="PL\img\icons8-supplier-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PL\icons8-supplier-32.png" />
+    <Resource Include="PL\img\icons8-document-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PL\icons8-document-32.png" />
+    <Resource Include="PL\img\icons8-group-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PL\icons8-group-32.png" />
+    <Resource Include="PL\img\icons8-ajouter-au-panier-96.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PL\icons8-ajouter-au-panier-96.png" />
+    <Resource Include="PL\img\icons8-insérer-un-tableau-96.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PL\icons8-insérer-un-tableau-96.png" />
+    <Resource Include="PL\img\icons8-consumption-96.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PL\icons8-consumption-96.png" />
+    <Resource Include="PL\img\icons8-fournisseur-96.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PL\icons8-fournisseur-96.png" />
+    <Resource Include="PL\img\icons8-ajouter-une-propriété-96.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PL\icons8-ajouter-une-propriété-96.png" />
+    <Resource Include="PL\img\icons8-type-de-peau-7-au-premier-plan-de-la-conférence-96.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="PL\icons8-type-de-peau-7-au-premier-plan-de-la-conférence-96.png" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

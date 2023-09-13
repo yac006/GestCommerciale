@@ -1,0 +1,13 @@
+﻿<Window x:Class="GestCommerciale.PL.Toast_Notifications.Toast_notif"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestCommerciale.PL.Toast_Notifications"
+        mc:Ignorable="d"
+        Title="Toast_notif" Height="100" Width="350">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="100" Source="/PL/img/icons8-type-de-peau-7-au-premier-plan-de-la-conférence-96.png"/>
+        <Label Content="Message" HorizontalAlignment="Left" Margin="89,0,0,0" VerticalAlignment="Center" Height="84" Width="261" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="14"/>
+    </Grid>
+</Window>

@@ -4,26 +4,37 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GestCommerciale.PL"
-             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" x:Class="GestCommerciale.PL.Categories_window"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:Native="clr-namespace:DevExpress.Xpf.Grid.LookUp.Native;assembly=DevExpress.Xpf.Grid.v23.1" x:Class="GestCommerciale.PL.Categories_window"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="730" Margin="30,30,30,30">
     <Grid Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" VerticalAlignment="Top" Height="233" Margin="0,41,0,0" RowHeight="40"/>
             <WrapPanel Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" VerticalAlignment="Top" Height="40" Margin="0,275,0,0">
-                <Button Content="Button" Height="30" Width="130" Margin="10,5,0,0"/>
-                <Button Content="Button" Height="30" Width="130" Margin="4,5,0,0"/>
-                <Button Content="Button" Height="30" Width="130" Margin="4,5,0,0"/>
-                <Button Content="Button" Height="30" Width="130" Margin="4,5,0,0"/>
-                <Button Content="Button" Height="30" Width="130" Margin="4,5,0,0"/>
+                <dx:SimpleButton Content="Ajouter" Width="130" Height="30" Margin="5,5,0,0" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_AddCircled.svg}"/>
+                <dx:SimpleButton Content="Modifier" Width="130" Height="30" Margin="5,5,0,0" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Edit.svg}"/>
+                <dx:SimpleButton Content="Supprimer" Width="130" Height="30" Margin="5,5,0,0" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}"/>
+                <dx:SimpleButton Content="Actualiser" Width="130" Height="30" Margin="5,5,0,0" Glyph="{dx:DXImage SvgImages/Outlook Inspired/PaymentRefund.svg}"/>
             </WrapPanel>
             <DockPanel Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" VerticalAlignment="Top" Height="40">
                 <TextBox TextWrapping="Wrap" Text="Recherche" Width="265" Height="28" HorizontalAlignment="Left" Margin="5,0,0,0"/>
-                <dx:SimpleButton Content="" Width="40" Height="24" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/Editors/HybridDemo_Search Button.svg}" HorizontalAlignment="Left" Margin="3,0,0,0"/>
+                <dx:SimpleButton Content="" Width="40" Height="28" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/Editors/HybridDemo_Search Button.svg}" HorizontalAlignment="Left" Margin="3,0,0,0"/>
             </DockPanel>
+            <dxg:GridControl x:Name="grid" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" Margin="0,40,0,175" SelectionMode="Cell" RestoreStateKeyFieldName="Id" RestoreStateOnSourceChange="True">
+                <dxg:GridControl.TotalSummary>
+                    <dxg:GridSummaryItem Alignment="Right" SummaryType="Count"/>
+                </dxg:GridControl.TotalSummary>
+                <dxg:GridControl.View>
+                    <dxg:TableView TotalSummaryPosition="Bottom"/>
+                </dxg:GridControl.View>
+                <dxg:GridColumn FieldName="Id" IsSmart="True" ReadOnly="True"/>
+                <dxg:GridColumn FieldName="Cat_Name" IsSmart="True"/>
+            </dxg:GridControl>
         </Grid>
 
     </Grid>
