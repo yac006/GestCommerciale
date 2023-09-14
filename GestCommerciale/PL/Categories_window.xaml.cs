@@ -16,6 +16,7 @@ using GestCommerciale;
 using DevExpress.Xpf.Grid;
 using DevExpress.Data.Linq;
 using System.Data.Entity;
+using GestCommerciale.PL.Fenêtres;
 
 namespace GestCommerciale.PL
 {
@@ -24,6 +25,8 @@ namespace GestCommerciale.PL
     /// </summary>
     public partial class Categories_window : UserControl
     {
+        Ajouter_cat_wind ajouter_cat_wind = new Ajouter_cat_wind();
+
         public Categories_window()
         {
             InitializeComponent();
@@ -35,12 +38,10 @@ namespace GestCommerciale.PL
             };
 
         }
-
-      
-
-
-
-
-
+        //Afficher la fenêtre d'ajoute des Categories
+        private void SimpleButton_Click(object sender, RoutedEventArgs e)
+        {
+            ajouter_cat_wind.Show();
+        }
     }
 }

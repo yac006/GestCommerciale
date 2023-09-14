@@ -22,13 +22,13 @@
                     </LinearGradientBrush>
                 </dx:CardsPanel.Background>
                 <DockPanel LastChildFill="False" Margin="0,0,-280,-107" Background="#FF2990F3" Height="37" HorizontalAlignment="Left"/>
-                <DockPanel Background="#FF7AC4FF" Width="118" Height="54">
-                    <Image Stretch="None" Source="/PL/icons8-grid-32.png" Margin="20,0,20,0" Width="49" Height="46"/>
+                <DockPanel Background="#FFD2D2D2" Width="118" Height="54">
+                    <Image Stretch="None" Source="/PL/img/icons8-grid-32.png" Margin="20,0,20,0" Width="49" Height="46"/>
                 </DockPanel>
-                <DockPanel LastChildFill="False" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Width="162">
+                <DockPanel LastChildFill="False" Background="#FFBADCFF" Width="162">
                     <Label Content="6" DockPanel.Dock="Top" FontSize="27" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center" Height="54" Width="113" Padding="0,8,0,3"/>
                 </DockPanel>
-                <DockPanel Background="#FF2990F3" LastChildFill="False" Margin="-118,0,-162,-8" Height="43">
+                <DockPanel Background="#FFBEBEBE" LastChildFill="False" Margin="-118,0,-162,-8" Height="43">
                     <Label Content="Categories"  HorizontalContentAlignment="Center" FontSize="16" Foreground="White" VerticalContentAlignment="Center" Padding="0,0,0,0" DockPanel.Dock="Top" Margin="0,9,0,0" Height="20"/>
                 </DockPanel>
             </dx:CardsPanel>
@@ -40,13 +40,13 @@
                     </LinearGradientBrush>
                 </dx:CardsPanel.Background>
                 <DockPanel LastChildFill="False" Margin="0,0,-280,-107" Background="#FF2990F3" Height="37" HorizontalAlignment="Left"/>
-                <DockPanel Background="#FF7AC4FF" Width="118" Height="54">
-                    <Image Stretch="None" Source="/PL/icons8-total-sales-32.png" Margin="20,0,20,0" Width="49" Height="46"/>
+                <DockPanel Background="#FFD2D2D2" Width="118" Height="54">
+                    <Image Stretch="None" Source="/PL/img/icons8-total-sales-32.png" Margin="20,0,20,0" Width="49" Height="46"/>
                 </DockPanel>
-                <DockPanel LastChildFill="False" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Width="162">
+                <DockPanel LastChildFill="False" Background="#FFBADCFF" Width="162">
                     <Label Content="12" FontSize="27" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center" Height="54" Width="113" Padding="0,8,0,3"/>
                 </DockPanel>
-                <DockPanel Background="#FF2990F3" LastChildFill="False" Margin="-118,0,-162,-8" Height="43">
+                <DockPanel LastChildFill="False" Margin="-118,0,-162,-8" Height="43" Background="#FFBEBEBE">
                     <Label Content="Ventes" DockPanel.Dock="Top"  HorizontalContentAlignment="Center" FontSize="16" Foreground="White" VerticalContentAlignment="Center" Padding="0,0,0,0"  Margin="0,9,0,0" Height="20"/>
                 </DockPanel>
             </dx:CardsPanel>
@@ -58,13 +58,13 @@
                     </LinearGradientBrush>
                 </dx:CardsPanel.Background>
                 <DockPanel LastChildFill="False" Margin="0,0,-280,-107" Background="#FF2990F3" Height="37" HorizontalAlignment="Left"/>
-                <DockPanel Background="#FF7AC4FF" Width="118" Height="54">
-                    <Image Stretch="None" Margin="20,0,20,0" Width="49" Height="46" Source="/PL/icons8-shopping-bag-32.png"/>
+                <DockPanel Background="#FFD2D2D2" Width="118" Height="54">
+                    <Image Stretch="None" Margin="20,0,20,0" Width="49" Height="46" Source="/PL/img/icons8-shopping-bag-32.png"/>
                 </DockPanel>
-                <DockPanel LastChildFill="False" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Width="162">
+                <DockPanel LastChildFill="False" Background="#FFBADCFF" Width="162">
                     <Label Content="5"  FontSize="27" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center" Height="54" Width="113" Padding="0,8,0,3"/>
                 </DockPanel>
-                <DockPanel Background="#FF2990F3" LastChildFill="False" Margin="-118,0,-162,-8" Height="43">
+                <DockPanel LastChildFill="False" Margin="-118,0,-162,-8" Height="43" Background="#FFBEBEBE">
                     <Label Content="Achats" DockPanel.Dock="Top" HorizontalContentAlignment="Center" FontSize="16" Foreground="White" VerticalContentAlignment="Center" Padding="0,0,0,0"  Margin="0,9,0,0" Height="20"/>
                 </DockPanel>
             </dx:CardsPanel>
@@ -76,13 +76,13 @@
                     </LinearGradientBrush>
                 </dx:CardsPanel.Background>
                 <DockPanel LastChildFill="False" Margin="0,0,-280,-107" Background="#FF2990F3" Height="37" HorizontalAlignment="Left"/>
-                <DockPanel Background="#FF7AC4FF" Width="118" Height="54">
-                    <Image Stretch="None" Source="/PL/icons8-supplier-32.png" Margin="20,0,20,0" Width="49" Height="46"/>
+                <DockPanel Background="#FFD2D2D2" Width="118" Height="54">
+                    <Image Stretch="None" Source="/PL/img/icons8-supplier-32.png" Margin="20,0,20,0" Width="49" Height="46"/>
                 </DockPanel>
-                <DockPanel LastChildFill="False" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Width="162">
+                <DockPanel LastChildFill="False" Background="#FFBADCFF" Width="162">
                     <Label Content="3"  FontSize="27" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center" Height="54" Width="113" Padding="0,8,0,3"/>
                 </DockPanel>
-                <DockPanel Background="#FF2990F3" LastChildFill="False" Margin="-118,0,-162,-8" Height="43">
+                <DockPanel LastChildFill="False" Margin="-118,0,-162,-8" Height="43" Background="#FFBEBEBE">
                     <Label Content="Fournisseurs" DockPanel.Dock="Top"  HorizontalContentAlignment="Center" FontSize="16" Foreground="White" VerticalContentAlignment="Center" Padding="0,0,0,0"  Margin="0,9,0,0" Height="20"/>
                 </DockPanel>
             </dx:CardsPanel>
@@ -94,13 +94,13 @@
                     </LinearGradientBrush>
                 </dx:CardsPanel.Background>
                 <DockPanel LastChildFill="False" Margin="0,0,-280,-107" Background="#FF2990F3" Height="37" HorizontalAlignment="Left"/>
-                <DockPanel Background="#FF7AC4FF" Width="118" Height="54">
-                    <Image Stretch="None" Margin="20,0,20,0" Width="49" Height="46" Source="/PL/icons8-document-32.png"/>
+                <DockPanel Background="#FFD2D2D2" Width="118" Height="54">
+                    <Image Stretch="None" Margin="20,0,20,0" Width="49" Height="46" Source="/PL/img/icons8-document-32.png"/>
                 </DockPanel>
-                <DockPanel LastChildFill="False" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Width="162">
+                <DockPanel LastChildFill="False" Background="#FFBADCFF" Width="162">
                     <Label Content="1"  FontSize="27" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center" Height="54" Width="113" Padding="0,8,0,3"/>
                 </DockPanel>
-                <DockPanel Background="#FF2990F3" LastChildFill="False" Margin="-118,0,-162,-8" Height="43">
+                <DockPanel LastChildFill="False" Margin="-118,0,-162,-8" Height="43" Background="#FFBEBEBE">
                     <Label Content="Rapports" DockPanel.Dock="Top" HorizontalContentAlignment="Center" FontSize="16" Foreground="White" VerticalContentAlignment="Center" Padding="0,0,0,0"  Margin="0,9,0,0" Height="20"/>
                 </DockPanel>
             </dx:CardsPanel>
@@ -112,13 +112,13 @@
                     </LinearGradientBrush>
                 </dx:CardsPanel.Background>
                 <DockPanel LastChildFill="False" Margin="0,0,-280,-107" Background="#FF2990F3" Height="37" HorizontalAlignment="Left"/>
-                <DockPanel Background="#FF7AC4FF" Width="118" Height="54">
-                    <Image Stretch="None" Source="/PL/icons8-group-32.png" Margin="20,0,20,0" Width="49" Height="46"/>
+                <DockPanel Background="#FFD2D2D2" Width="118" Height="54">
+                    <Image Stretch="None" Source="/PL/img/icons8-group-32.png" Margin="20,0,20,0" Width="49" Height="46"/>
                 </DockPanel>
-                <DockPanel LastChildFill="False" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Width="162">
+                <DockPanel LastChildFill="False" Background="#FFBADCFF" Width="162">
                     <Label Content="12"  FontSize="27" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center" Height="54" Width="113" Padding="0,8,0,3"/>
                 </DockPanel>
-                <DockPanel Background="#FF2990F3" LastChildFill="False" Margin="-118,0,-162,-8" Height="43">
+                <DockPanel LastChildFill="False" Margin="-118,0,-162,-8" Height="43" Background="#FFBEBEBE">
                     <Label Content="Clients"  DockPanel.Dock="Top" HorizontalContentAlignment="Center" FontSize="16" Foreground="White" VerticalContentAlignment="Center" Padding="0,0,0,0" Margin="0,9,0,0" Height="20"/>
                 </DockPanel>
             </dx:CardsPanel>
@@ -137,7 +137,7 @@
                         <GradientStop Color="#FFFAFAFA" Offset="1"/>
                     </LinearGradientBrush>
                 </StackPanel.Background>
-                <Image Height="81" Source="/PL/icons8-insérer-un-tableau-96.png" Width="104" Margin="0,5,0,0"/>
+                <Image Height="81" Source="/PL/img/icons8-insérer-un-tableau-96.png" Width="104" Margin="0,5,0,0"/>
                 <Label Content="Ajouter des categories" HorizontalContentAlignment="Center"/>
             </StackPanel>
             <StackPanel Width="140" Height="111" Margin="30,30,0,0">
@@ -147,7 +147,7 @@
                         <GradientStop Color="#FFFAFAFA" Offset="1"/>
                     </LinearGradientBrush>
                 </StackPanel.Background>
-                <Image Height="81" Source="/PL/icons8-ajouter-au-panier-96.png" Width="104" Margin="0,5,0,0"/>
+                <Image Height="81" Source="/PL/img/icons8-ajouter-au-panier-96.png" Width="104" Margin="0,5,0,0"/>
                 <Label Content="Ajouter des achats" HorizontalContentAlignment="Center"/>
             </StackPanel>
             <StackPanel Width="140" Height="111" Margin="30,30,0,0">
@@ -157,7 +157,7 @@
                         <GradientStop Color="#FFFAFAFA" Offset="1"/>
                     </LinearGradientBrush>
                 </StackPanel.Background>
-                <Image Height="81" Source="/PL/icons8-consumption-96.png" Width="104" Margin="0,5,0,0"/>
+                <Image Height="81" Source="/PL/img/icons8-consumption-96.png" Width="104" Margin="0,5,0,0"/>
                 <Label Content="Ajouter des ventes" HorizontalContentAlignment="Center"/>
             </StackPanel>
             <StackPanel Width="140" Height="111" Margin="30,30,0,0">
@@ -167,7 +167,7 @@
                         <GradientStop Color="#FFFAFAFA" Offset="1"/>
                     </LinearGradientBrush>
                 </StackPanel.Background>
-                <Image Height="81" Source="/PL/icons8-fournisseur-96.png" Width="104" Margin="0,5,0,0"/>
+                <Image Height="81" Source="/PL/img/icons8-fournisseur-96.png" Width="104" Margin="0,5,0,0"/>
                 <Label Content="Ajouter des fournisseurs" HorizontalContentAlignment="Center"/>
             </StackPanel>
             <StackPanel Width="140" Height="111" Margin="30,30,0,0">
@@ -177,7 +177,7 @@
                         <GradientStop Color="#FFFAFAFA" Offset="1"/>
                     </LinearGradientBrush>
                 </StackPanel.Background>
-                <Image Height="81" Source="/PL/icons8-ajouter-une-propriété-96.png" Width="104" Margin="0,5,0,0"/>
+                <Image Height="81" Source="/PL/img/icons8-ajouter-une-propriété-96.png" Width="104" Margin="0,5,0,0"/>
                 <Label Content="Ajouter des rapports" HorizontalContentAlignment="Center"/>
             </StackPanel>
             <StackPanel Width="140" Height="111" Margin="30,30,0,0">
@@ -187,7 +187,7 @@
                         <GradientStop Color="#FFFAFAFA" Offset="1"/>
                     </LinearGradientBrush>
                 </StackPanel.Background>
-                <Image Height="81" Source="/PL/icons8-type-de-peau-7-au-premier-plan-de-la-conférence-96.png" Width="104" Margin="0,5,0,0"/>
+                <Image Height="81" Source="/PL/img/icons8-type-de-peau-7-au-premier-plan-de-la-conférence-96.png" Width="104" Margin="0,5,0,0"/>
                 <Label Content="Ajouter des clients" HorizontalContentAlignment="Center"/>
             </StackPanel>
         </WrapPanel>

@@ -4,17 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestCommerciale.PL.Fenêtres"
-        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" x:Class="GestCommerciale.PL.Fenêtres.Ajouter_cat_wind"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" x:Name="window_ajt_cat" x:Class="GestCommerciale.PL.Fenêtres.Ajouter_cat_wind"
         mc:Ignorable="d"
-        Title="Ajouter_cat_wind" Height="450" Width="595">
+        Title="Ajouter_cat_wind" Height="450" Width="595" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
-        <dx:SimpleButton Content="" Glyph="{dx:DXImage SvgImages/RichEdit/CloseHeaderAndFooter.svg}" Click="SimpleButton_Click_1" Margin="0,5,5,395" HorizontalAlignment="Right" Width="40"/>
         <DockPanel LastChildFill="False" Margin="121,57,121,56">
-            <TextBox TextWrapping="Wrap" DockPanel.Dock="Top" Height="26" Margin="20,10,20,10"/>
+            <TextBox x:Name="textbox_name" TextWrapping="Wrap" DockPanel.Dock="Top" Height="26" Margin="20,10,20,10"/>
 
-            <dxe:ImageEdit x:Name="cat_pic" DockPanel.Dock="Top" Height="230" Margin="20,0,20,0"/>
-            <dx:SimpleButton x:Name="btn_add" Content="Ajouter" Width="314" Glyph="{dx:DXImage SvgImages/Snap/AddNewDataSource.svg}" Height="30" Margin="20,0,0,0"/>
+            <dxe:ImageEdit x:Name="image_cat" DockPanel.Dock="Top" Height="230" Margin="20,0,20,0"/>
+            <dx:SimpleButton x:Name="btn_add" Content="Ajouter" Width="314" Glyph="{dx:DXImage SvgImages/Snap/AddNewDataSource.svg}" Height="30" Margin="20,0,0,0" Click="btn_add_Click"/>
         </DockPanel>
+        <dx:SimpleButton x:Name="btn_close" Content="" Glyph="{dx:DXImage SvgImages/RichEdit/CloseHeaderAndFooter.svg}" Click="SimpleButton_Click_1" Width="25" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Padding="5,5,5,5" Margin="0,5,5,0"/>
 
     </Grid>
 </Window>

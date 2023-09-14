@@ -8,6 +8,6 @@
         Title="Toast_notif" Height="100" Width="350">
     <Grid>
         <Image HorizontalAlignment="Left" Height="84" VerticalAlignment="Top" Width="100" Source="/PL/img/icons8-type-de-peau-7-au-premier-plan-de-la-conférence-96.png"/>
-        <Label Content="Message" HorizontalAlignment="Left" Margin="89,0,0,0" VerticalAlignment="Center" Height="84" Width="261" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="14"/>
+        <Label x:Name="label_msg" Content="Message" HorizontalAlignment="Left" Margin="89,0,0,0" VerticalAlignment="Center" Height="84" Width="261" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="14"/>
     </Grid>
 </Window>
