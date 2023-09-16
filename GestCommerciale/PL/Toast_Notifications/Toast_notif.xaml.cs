@@ -29,7 +29,7 @@ namespace GestCommerciale.PL.Toast_Notifications
             //  DispatcherTimer setup
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-            dispatcherTimer.Interval = TimeSpan.FromSeconds(2);
+            dispatcherTimer.Interval = TimeSpan.FromSeconds(4);
             dispatcherTimer.Start();
 
         }

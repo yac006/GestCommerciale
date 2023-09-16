@@ -17,6 +17,9 @@ using DevExpress.Xpf.Grid;
 using DevExpress.Data.Linq;
 using System.Data.Entity;
 using GestCommerciale.PL.Fenêtres;
+using DevExpress.XtraRichEdit.Fields;
+using GestCommerciale.PL.Toast_Notifications;
+using GestCommerciale.BL;
 
 namespace GestCommerciale.PL
 {
@@ -26,6 +29,13 @@ namespace GestCommerciale.PL
     public partial class Categories_window : UserControl
     {
         Ajouter_cat_wind ajouter_cat_wind = new Ajouter_cat_wind();
+        
+        DB_Gest_ComEntities1 db = new DB_Gest_ComEntities1();
+        Table_Categories table_Categories = new Table_Categories();
+
+        Toast_notif toast_Notif = new Toast_notif();
+
+        Methods methods = new Methods();
 
         public Categories_window()
         {
@@ -46,6 +56,7 @@ namespace GestCommerciale.PL
             ajouter_cat_wind.Show();
         }
         DB_Gest_ComEntities1 _Context;
+
 
         public void LoadData()
         {
@@ -74,6 +85,48 @@ namespace GestCommerciale.PL
         private void SimpleButton_Click_1(object sender, RoutedEventArgs e)
         {     
             LoadData();
+        }
+        //Supprimer les enregistrements
+        private void SimpleButton_Click_2(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Récupèrer "Id" de la ligne selectionnée
+                int id = Convert.ToInt32(grid.GetFocusedRowCellValue("Id"));
+                //Supprimer l'enregistrement dans la bdd a l'aide de "id"
+                var row_result = db.Table_Categories.Where(x => x.Id == id).FirstOrDefault();
+                db.Entry(row_result).State = EntityState.Deleted;
+                db.SaveChanges();
+                //Actualiser les données
+                LoadData();
+                //Afficher le message dialog
+                toast_Notif.label_msg.Content = "L'élément a été supprimer avec succée ...";
+                toast_Notif.Show();
+            }
+            catch { }
+           
+
+
+
+
+
+        }
+
+        private void btn_modify_Click(object sender, RoutedEventArgs e)
+        {
+            //Récupèrer "Id" de la ligne selectionnée
+            int id = Convert.ToInt32(grid.GetFocusedRowCellValue("Id"));
+
+            var row_result = db.Table_Categories.Where(x => x.Id == id).FirstOrDefault();
+
+            ajouter_cat_wind.textbox_name.Text = row_result.Cat_Name.ToString();
+            ajouter_cat_wind.imgEdit.Source = methods.LoadImage(row_result.Cat_img);
+
+            ajouter_cat_wind.Show();
+
+
+
+
         }
     }
 }

@@ -16,6 +16,9 @@ using GestCommerciale.BL;
 using GestCommerciale.PL.Toast_Notifications;
 using System.Drawing.Imaging;
 using Microsoft.Win32;
+using DevExpress.Xpf.Editors;
+using DevExpress.Xpf.Editors.Internal;
+using DevExpress.Xpf.Core.Internal;
 
 namespace GestCommerciale.PL.Fenêtres
 {
@@ -35,8 +38,6 @@ namespace GestCommerciale.PL.Fenêtres
         private string chemin = null;
 
         
-
-
 
         public Ajouter_cat_wind()
         {
@@ -61,7 +62,7 @@ namespace GestCommerciale.PL.Fenêtres
                 {
                     //Insertion des données au bdd
                     tb_categories.Cat_Name = textbox_name.Text;
-                    tb_categories.Cat_img = methods.convert_byte(chemin);
+                    tb_categories.Cat_img = methods.getJPGFromImageControl(imgEdit.Source as BitmapImage);
                     db.Table_Categories.Add(tb_categories);
                     db.SaveChanges();
                     
@@ -71,7 +72,7 @@ namespace GestCommerciale.PL.Fenêtres
             
 
                 }
-                else
+                else //Modification
                 {
                     
                 }
@@ -97,14 +98,7 @@ namespace GestCommerciale.PL.Fenêtres
         //Choisir une image avec FileDialog
         private void SimpleButton_Click(object sender, RoutedEventArgs e)
         {
-            dialog.Title = "Select a picture";
-            dialog.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" + "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" + "Portable + Network Graphic (*.png)|*.png";
-
-            if (dialog.ShowDialog() == true)
-            {
-                chemin = dialog.FileName;
-                MessageBox.Show(dialog.FileName);
-            }
+            
         }
 
         private void window_ajt_cat_Closing_1(object sender, System.ComponentModel.CancelEventArgs e)
@@ -112,5 +106,20 @@ namespace GestCommerciale.PL.Fenêtres
             this.Visibility = Visibility.Hidden; 
             e.Cancel = true;
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            //var row_result = db.Table_Categories.Where(x => x.Id == 1).FirstOrDefault();
+            //imgEdit.Source = LoadImage(row_result.Cat_img);
+
+            
+
+     
+
+        }
+
+       
+
+
     }
 }

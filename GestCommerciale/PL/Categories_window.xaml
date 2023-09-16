@@ -17,9 +17,9 @@
             </Grid.RowDefinitions>
             <WrapPanel Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" VerticalAlignment="Top" Height="40" Margin="0,275,0,0">
                 <dx:SimpleButton Content="Ajouter" Width="130" Height="30" Margin="5,5,0,0" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_AddCircled.svg}" Click="SimpleButton_Click"/>
-                <dx:SimpleButton Content="Modifier" Width="130" Height="30" Margin="5,5,0,0" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Edit.svg}"/>
-                <dx:SimpleButton Content="Supprimer" Width="130" Height="30" Margin="5,5,0,0" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}"/>
-                <dx:SimpleButton Content="Actualiser" Width="130" Height="30" Margin="5,5,0,0" Glyph="{dx:DXImage SvgImages/Outlook Inspired/PaymentRefund.svg}" Click="SimpleButton_Click_1"/>
+                <dx:SimpleButton x:Name="btn_modify" Content="Modifier" Width="130" Height="30" Margin="5,5,0,0" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Edit.svg}" Click="btn_modify_Click"/>
+                <dx:SimpleButton x:Name="btn_delete" Content="Supprimer" Width="130" Height="30" Margin="5,5,0,0" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" Click="SimpleButton_Click_2"/>
+                <dx:SimpleButton x:Name="btn_refresh" Content="Actualiser" Width="130" Height="30" Margin="5,5,0,0" Glyph="{dx:DXImage SvgImages/Outlook Inspired/PaymentRefund.svg}" Click="SimpleButton_Click_1"/>
             </WrapPanel>
             <DockPanel Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" VerticalAlignment="Top" Height="40">
                 <TextBox TextWrapping="Wrap" Text="Recherche" Width="265" Height="28" HorizontalAlignment="Left" Margin="5,0,0,0"/>
