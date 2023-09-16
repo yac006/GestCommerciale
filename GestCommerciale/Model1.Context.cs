@@ -13,10 +13,10 @@ namespace GestCommerciale
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DB_Gest_ComEntities : DbContext
+    public partial class DB_Gest_ComEntities1 : DbContext
     {
-        public DB_Gest_ComEntities()
-            : base("name=DB_Gest_ComEntities")
+        public DB_Gest_ComEntities1()
+            : base("name=DB_Gest_ComEntities1")
         {
         }
     

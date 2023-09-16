@@ -100,6 +100,9 @@ namespace GestCommerciale
         {
             pnl_container.Children.Clear ();
             pnl_container.Children.Add(categories_window);
+            //Actualiser les données de la bdd (dataGrid)
+            categories_window.LoadData();
+
         }
     }
 }

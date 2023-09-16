@@ -9,9 +9,9 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Cat_Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Cat_img" Type="image" />
+          <Property Name="Cat_img" Type="image" Nullable="false" />
         </EntityType>
         <EntityContainer Name="DB_Gest_ComModelStoreContainer">
           <EntitySet Name="Table_Categories" EntityType="Self.Table_Categories" Schema="dbo" store:Type="Tables" />
@@ -25,11 +25,11 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Cat_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Cat_img" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Cat_img" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="DB_Gest_ComEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DB_Gest_ComEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Table_Categories" EntityType="Self.Table_Categories" />
         </EntityContainer>
       </Schema>
@@ -37,7 +37,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DB_Gest_ComModelStoreContainer" CdmEntityContainer="DB_Gest_ComEntities">
+        <EntityContainerMapping StorageEntityContainer="DB_Gest_ComModelStoreContainer" CdmEntityContainer="DB_Gest_ComEntities1">
           <EntitySetMapping Name="Table_Categories">
             <EntityTypeMapping TypeName="DB_Gest_ComModel.Table_Categories">
               <MappingFragment StoreEntitySet="Table_Categories">

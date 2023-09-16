@@ -30,18 +30,50 @@ namespace GestCommerciale.PL
         public Categories_window()
         {
             InitializeComponent();
-            var context = new DB_Gest_ComEntities();
+            var context = new DB_Gest_ComEntities1();
             var source = new EntityServerModeSource
             {
                 KeyExpression = nameof(Table_Categories.Id),
                 QueryableSource = context.Table_Categories.AsNoTracking()
             };
+            LoadData();
 
         }
         //Afficher la fenêtre d'ajoute des Categories
         private void SimpleButton_Click(object sender, RoutedEventArgs e)
         {
+            ajouter_cat_wind.id = 0;
             ajouter_cat_wind.Show();
+        }
+        DB_Gest_ComEntities1 _Context;
+
+        public void LoadData()
+        {
+            _Context = new DB_Gest_ComEntities1();
+            grid.ItemsSource = _Context.Table_Categories.ToList();
+        }
+
+        void OnValidateRow(object sender, GridRowValidationEventArgs e)
+        {
+            var row = (Table_Categories)e.Row;
+            if (e.IsNewItem)
+                _Context.Table_Categories.Add(row);
+            _Context.SaveChanges();
+        }
+
+        void OnValidateRowDeletion(object sender, GridValidateRowDeletionEventArgs e)
+        {
+            var row = (Table_Categories)e.Rows.Single();
+            _Context.Table_Categories.Remove(row);
+            _Context.SaveChanges();
+        }
+
+        void OnDataSourceRefresh(object sender, DataSourceRefreshEventArgs e) { LoadData(); }
+        
+        //Actualiser les données
+        private void SimpleButton_Click_1(object sender, RoutedEventArgs e)
+        {     
+            LoadData();
         }
     }
 }

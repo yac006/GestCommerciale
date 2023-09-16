@@ -6,13 +6,21 @@
         xmlns:local="clr-namespace:GestCommerciale.PL.Fenêtres"
         xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" x:Name="window_ajt_cat" x:Class="GestCommerciale.PL.Fenêtres.Ajouter_cat_wind"
         mc:Ignorable="d"
-        Title="Ajouter_cat_wind" Height="450" Width="595" WindowStartupLocation="CenterScreen" WindowStyle="None">
+        Title="Ajouter_cat_wind" Height="450" Width="595" WindowStartupLocation="CenterScreen" WindowStyle="None" Closing="window_ajt_cat_Closing_1">
     <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
         <DockPanel LastChildFill="False" Margin="121,57,121,56">
             <TextBox x:Name="textbox_name" TextWrapping="Wrap" DockPanel.Dock="Top" Height="26" Margin="20,10,20,10"/>
-
-            <dxe:ImageEdit x:Name="image_cat" DockPanel.Dock="Top" Height="230" Margin="20,0,20,0"/>
-            <dx:SimpleButton x:Name="btn_add" Content="Ajouter" Width="314" Glyph="{dx:DXImage SvgImages/Snap/AddNewDataSource.svg}" Height="30" Margin="20,0,0,0" Click="btn_add_Click"/>
+            <dx:SimpleButton x:Name="btn_add" Content="Ajouter" Glyph="{dx:DXImage SvgImages/Snap/AddNewDataSource.svg}" Click="btn_add_Click" RenderTransformOrigin="0.5,0.5" Height="29" Width="315" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" DockPanel.Dock="Bottom">
+                <dx:SimpleButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </dx:SimpleButton.RenderTransform>
+            </dx:SimpleButton>
+            <dx:SimpleButton Content="Choisir Image" Click="SimpleButton_Click" Glyph="{dx:DXImage SvgImages/DiagramIcons/LoadImage.svg}" Width="313" Height="241" DockPanel.Dock="Top"/>
         </DockPanel>
         <dx:SimpleButton x:Name="btn_close" Content="" Glyph="{dx:DXImage SvgImages/RichEdit/CloseHeaderAndFooter.svg}" Click="SimpleButton_Click_1" Width="25" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Padding="5,5,5,5" Margin="0,5,5,0"/>
 

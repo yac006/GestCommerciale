@@ -27,18 +27,22 @@ namespace GestCommerciale.PL.Toast_Notifications
             InitializeComponent();
 
             //  DispatcherTimer setup
-            dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-            dispatcherTimer.Interval = TimeSpan.FromSeconds(1);
+            dispatcherTimer.Interval = TimeSpan.FromSeconds(2);
             dispatcherTimer.Start();
 
         }
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            
+            window_msg_notif.Close();
         }
 
-
+        private void window_msg_notif_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+            e.Cancel = true;
+        }
     }
 }
