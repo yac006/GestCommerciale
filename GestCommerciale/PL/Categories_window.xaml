@@ -4,41 +4,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GestCommerciale.PL"
-             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:Native="clr-namespace:DevExpress.Xpf.Grid.LookUp.Native;assembly=DevExpress.Xpf.Grid.v23.1" x:Class="GestCommerciale.PL.Categories_window"
+             x:Class="GestCommerciale.PL.Categories_window"
+
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="730" Margin="30,30,30,30">
     <Grid Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <WrapPanel Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" VerticalAlignment="Top" Height="40" Margin="0,275,0,0">
-                <dx:SimpleButton Content="Ajouter" Width="130" Height="30" Margin="5,5,0,0" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_AddCircled.svg}" Click="SimpleButton_Click"/>
-                <dx:SimpleButton x:Name="btn_modify" Content="Modifier" Width="130" Height="30" Margin="5,5,0,0" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Edit.svg}" Click="btn_modify_Click"/>
-                <dx:SimpleButton x:Name="btn_delete" Content="Supprimer" Width="130" Height="30" Margin="5,5,0,0" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Delete.svg}" Click="SimpleButton_Click_2"/>
-                <dx:SimpleButton x:Name="btn_refresh" Content="Actualiser" Width="130" Height="30" Margin="5,5,0,0" Glyph="{dx:DXImage SvgImages/Outlook Inspired/PaymentRefund.svg}" Click="SimpleButton_Click_1"/>
-            </WrapPanel>
-            <DockPanel Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" VerticalAlignment="Top" Height="40">
-                <TextBox TextWrapping="Wrap" Text="Recherche" Width="265" Height="28" HorizontalAlignment="Left" Margin="5,0,0,0"/>
-                <dx:SimpleButton Content="" Width="40" Height="28" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/Editors/HybridDemo_Search Button.svg}" HorizontalAlignment="Left" Margin="3,0,0,0"/>
-            </DockPanel>
-            <dxg:GridControl x:Name="grid" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" Margin="0,40,0,0" SelectionMode="Cell" RestoreStateKeyFieldName="Id" RestoreStateOnSourceChange="True" VerticalAlignment="Top" Height="235">
-                <dxg:GridControl.TotalSummary>
-                    <dxg:GridSummaryItem Alignment="Right" SummaryType="Count"/>
-                </dxg:GridControl.TotalSummary>
-                <dxg:GridControl.InputBindings>
-                    <KeyBinding Command="{Binding View.Commands.DeleteFocusedRow, ElementName=grid}" Key="Delete"/>
-                </dxg:GridControl.InputBindings>
-                <dxg:GridControl.View>
-                    <dxg:CardView ShowFixedTotalSummary="True" TotalSummaryPosition="Bottom"/>
-                </dxg:GridControl.View>
-                <dxg:GridColumn FieldName="Id" IsSmart="True" ReadOnly="True"/>
-                <dxg:GridColumn FieldName="Cat_Name" IsSmart="True"/>
-            </dxg:GridControl>
-        </Grid>
+        <DockPanel Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" VerticalAlignment="Top" Height="40">
+            <TextBox TextWrapping="Wrap" Text="Recherche" Width="265" Height="28" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+            <Button Content="" Width="40" Height="28" HorizontalAlignment="Left" Margin="3,0,0,0"/>
+        </DockPanel>
+        <WrapPanel Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" VerticalAlignment="Top" Height="40" Margin="0,340,0,0">
+            <Button x:Name="btn_add" Content="Ajouter" Width="130" Height="30" Margin="5,5,0,0" Click="btn_add_Click"/>
+            <Button x:Name="btn_modify" Content="Modifier" Width="130" Height="30" Margin="5,5,0,0" Click="btn_modify_Click"/>
+            <Button x:Name="btn_delete" Content="Supprimer" Width="130" Height="30" Margin="5,5,0,0" Click="btn_delete_Click"/>
+            <Button x:Name="btn_refresh" Content="Actualiser" Width="130" Height="30" Margin="5,5,0,0" Click="btn_refresh_Click"/>
+        </WrapPanel>
 
     </Grid>
 </UserControl>

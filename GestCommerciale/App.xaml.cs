@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Syncfusion.Licensing;
+
 
 namespace GestCommerciale
 {
@@ -13,5 +15,11 @@ namespace GestCommerciale
     /// </summary>
     public partial class App : Application
     {
+        
+        public App()
+        {
+            //Register Syncfusion license
+            SyncfusionLicenseProvider.RegisterLicense("MjcxMzk3M0AzMjMzMmUzMDJlMzBlelU1THJ6YkNMRDFtekNjQUFEdEVSQnJEKzlja0ZPbk9TS0xjYU1vRlhRPQ==");
+        }
     }
 }

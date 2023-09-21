@@ -1,5 +1,4 @@
-﻿using DevExpress.Xpf.Core;
-using GestCommerciale.PL;
+﻿using GestCommerciale.PL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,42 +36,32 @@ namespace GestCommerciale
         public object Envirement { get; private set; }
 
         //Agrendir et Minimiser la fenêtre
-        private void SimpleButton_Click(object sender, RoutedEventArgs e)
+        private void btn_min_and_max_Click(object sender, RoutedEventArgs e)
         {
             if (main_window.WindowState == WindowState.Normal)
             {
                 main_window.WindowState = WindowState.Maximized;
             }
-            else if(main_window.WindowState == WindowState.Maximized)
+            else if (main_window.WindowState == WindowState.Maximized)
             {
                 main_window.WindowState = WindowState.Normal;
             }
-            
         }
-        //Fermer l'application
-        private void SimpleButton_Click_1(object sender, RoutedEventArgs e)
-        {
-            Environment.Exit(0);
-        }
+        
         //Reduire la fenêtre
-        private void SimpleButton_Click_2(object sender, RoutedEventArgs e)
+        private void btn_hide_wind_Click(object sender, RoutedEventArgs e)
         {
             main_window.WindowState = WindowState.Minimized;
         }
-        //Charger la page "Accuiel"
-        private void SimpleButton_Click_3(object sender, RoutedEventArgs e)
-        {
-            pnl_container.Children.Clear();
-            pnl_container.Children.Add(accuiel_Window);
 
+        //Fermeture de l'application
+        private void btn_close_wind_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
         }
 
-        private void SimpleButton_Click_4(object sender, RoutedEventArgs e)
-        {
-
-        }
         //Collapse
-        private void SimpleButton_Click_5(object sender, RoutedEventArgs e)
+        private void btn_collapse_Click(object sender, RoutedEventArgs e)
         {
             if (pnl_sidebar.Width == 280)
             {
@@ -95,14 +84,21 @@ namespace GestCommerciale
                 pnl_container.Margin = margin;
             }
         }
-        //Charger la page "Categories"
-        private void SimpleButton_Click_6(object sender, RoutedEventArgs e)
+
+
+        //Charger la page "Accuiel"
+        private void btn_show_accuiel_Click(object sender, RoutedEventArgs e)
         {
-            pnl_container.Children.Clear ();
+            pnl_container.Children.Clear();
+            pnl_container.Children.Add(accuiel_Window);
+        }
+        
+        //Charger la page "Categories"
+        private void btn_show_categories_Click(object sender, RoutedEventArgs e)
+        {
+            pnl_container.Children.Clear();
             pnl_container.Children.Add(categories_window);
             //Actualiser les données de la bdd (dataGrid)
-            categories_window.LoadData();
-
         }
     }
 }

@@ -16,9 +16,7 @@ using GestCommerciale.BL;
 using GestCommerciale.PL.Toast_Notifications;
 using System.Drawing.Imaging;
 using Microsoft.Win32;
-using DevExpress.Xpf.Editors;
-using DevExpress.Xpf.Editors.Internal;
-using DevExpress.Xpf.Core.Internal;
+using System.Data.Entity;
 
 namespace GestCommerciale.PL.Fenêtres
 {
@@ -34,8 +32,7 @@ namespace GestCommerciale.PL.Fenêtres
         Toast_notif toast_Notif = new Toast_notif();
         Dialog Dialog = new Dialog();
         public int id = 0;
-        OpenFileDialog dialog = new OpenFileDialog();
-        private string chemin = null;
+
 
         
 
@@ -74,7 +71,18 @@ namespace GestCommerciale.PL.Fenêtres
                 }
                 else //Modification
                 {
-                    
+                    tb_categories.Id = id;
+                    tb_categories.Cat_Name = textbox_name.Text;
+                    tb_categories.Cat_img = methods.getJPGFromImageControl(imgEdit.Source as BitmapImage);
+                    db.Entry(tb_categories).State = EntityState.Modified;
+                    db.SaveChanges();
+
+                    //Afficher le message dialog
+                    toast_Notif.label_msg.Content = "Categorie a été modifie avec succée ...";
+                    toast_Notif.Show();
+
+            
+                    this.Close();                 
                 }
             }
 
@@ -96,10 +104,10 @@ namespace GestCommerciale.PL.Fenêtres
            
         }
         //Choisir une image avec FileDialog
-        private void SimpleButton_Click(object sender, RoutedEventArgs e)
+       /* private void SimpleButton_Click(object sender, RoutedEventArgs e)
         {
             
-        }
+        }*/
 
         private void window_ajt_cat_Closing_1(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -107,16 +115,7 @@ namespace GestCommerciale.PL.Fenêtres
             e.Cancel = true;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            //var row_result = db.Table_Categories.Where(x => x.Id == 1).FirstOrDefault();
-            //imgEdit.Source = LoadImage(row_result.Cat_img);
-
-            
-
-     
-
-        }
+      
 
        
 

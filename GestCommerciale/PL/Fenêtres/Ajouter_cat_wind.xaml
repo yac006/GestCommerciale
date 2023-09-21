@@ -10,20 +10,19 @@
     <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
         <DockPanel LastChildFill="False" Margin="121,57,121,56">
             <TextBox x:Name="textbox_name" TextWrapping="Wrap" DockPanel.Dock="Top" Height="28" Margin="20,10,20,10" Width="316"/>
-            <dx:SimpleButton x:Name="btn_add" Content="Ajouter" Glyph="{dx:DXImage SvgImages/Snap/AddNewDataSource.svg}" Click="btn_add_Click" RenderTransformOrigin="0.5,0.5" Height="29" Width="315" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" DockPanel.Dock="Bottom" Margin="0,0,0,10">
-                <dx:SimpleButton.RenderTransform>
+            <Button x:Name="btn_add" Content="Ajouter" Click="btn_add_Click" RenderTransformOrigin="0.5,0.5" Height="29" Width="315" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" DockPanel.Dock="Bottom" Margin="0,0,0,10">
+                <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="-1"/>
                         <SkewTransform/>
                         <RotateTransform/>
                         <TranslateTransform/>
                     </TransformGroup>
-                </dx:SimpleButton.RenderTransform>
-            </dx:SimpleButton>
-            <dxe:ImageEdit x:Name="imgEdit" Width="313" Height="241" DockPanel.Dock="Top"/>
+                </Button.RenderTransform>
+            </Button>
+            <Image x:Name="imgEdit" Width="313" Height="241" DockPanel.Dock="Top"/>
         </DockPanel>
-        <dx:SimpleButton x:Name="btn_close" Content="" Glyph="{dx:DXImage SvgImages/RichEdit/CloseHeaderAndFooter.svg}" Click="SimpleButton_Click_1" Width="25" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Padding="5,5,5,5" Margin="0,5,5,0"/>
-        <Button x:Name="btn_test" Content="Test" HorizontalAlignment="Left" Margin="495,305,0,0" VerticalAlignment="Top" Click="Button_Click_1" Width="70"/>
+        <Button x:Name="btn_close" Content=""  Click="SimpleButton_Click_1" Width="25" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Padding="5,5,5,5" Margin="0,5,5,0"/>
 
     </Grid>
 </Window>

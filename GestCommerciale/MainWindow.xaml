@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GestCommerciale"
-        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:dxdove="http://schemas.devexpress.com/winfx/2008/xaml/docking/visualelements" x:Name="main_window" x:Class="GestCommerciale.MainWindow"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:dxdove="http://schemas.devexpress.com/winfx/2008/xaml/docking/visualelements" xmlns:Syncfusion="http://schemas.syncfusion.com/wpf" x:Name="main_window" x:Class="GestCommerciale.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="840" Width="1185" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" WindowStyle="None">
     <Grid>
@@ -29,23 +29,23 @@
                 <Label Content="Admin" Cursor="None" FontFamily="Bahnschrift Light Condensed" HorizontalContentAlignment="Center" FontSize="14" DockPanel.Dock="Bottom" Height="17" Padding="0,0,0,0" Margin="0,5,0,5"/>
             </DockPanel>
             <StackPanel x:Name="pnl_items_cont" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" DockPanel.Dock="Top" Height="503" CanVerticallyScroll="True" CanHorizontallyScroll="True" Margin="16,20,16,0">
-                <dx:SimpleButton Content="Accuiel" Height="50" Margin="7,5,7,0" Width="NaN" Click="SimpleButton_Click_3" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Address.svg}" GlyphWidth="35" GlyphHeight="35" Interval="32" GlyphToContentOffset="10" FontFamily="Segoe UI"/>
-                <dx:SimpleButton Content="Catégories" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Dashboards/ShowLegend.svg}" Click="SimpleButton_Click_6"/>
-                <dx:SimpleButton Content="&#xA;Fournisseurs&#xA;" Height="50" Margin="7,5,7,0" Click="SimpleButton_Click_4" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Position.svg}"/>
-                <dx:SimpleButton Content="Achats" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Sale_Item.svg}" GlyphToContentOffset="25" Interval="2"/>
-                <dx:SimpleButton Content="Clients" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Department.svg}" GlyphToContentOffset="20"/>
-                <dx:SimpleButton Content="Ventes" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Sale.svg}" GlyphToContentOffset="20"/>
-                <dx:SimpleButton Content="Rapports" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Report.svg}" GlyphToContentOffset="10"/>
-                <dx:SimpleButton Content="Utilisateurs" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/Business Objects/BO_User.svg}"/>
-                <dx:SimpleButton Content="Paramètres" Height="50" UseLayoutRounding="False" Margin="7,5,7,0" Glyph="{dx:DXImage SvgImages/HybridDemoIcons/BottomPanel/HybridDemo_Settings.svg}"/>
+                <Syncfusion:ButtonAdv x:Name="btn_show_accuiel" Content="ButtonAdv" Height="50" Label="Accuiel" Margin="7,5,7,0" IconWidth="30" IconHeight="30" SmallIcon="/home-button.png" HorizontalContentAlignment="Center" Padding="0,0,-3,0" UseLayoutRounding="True" BorderThickness="1,1,0,1" BorderBrush="#FFA7A4A4" Click="btn_show_accuiel_Click"/>
+                <Syncfusion:ButtonAdv x:Name="btn_show_categories" Content="ButtonAdv" Height="50" Label="Categories" Margin="7,5,7,0" SmallIcon="/app.png" IconWidth="30" IconHeight="30" UseLayoutRounding="True" Padding="0,0,4,0" BorderThickness="1,1,1,1" Click="btn_show_categories_Click"/>
+                <Syncfusion:ButtonAdv x:Name="btn_show_achats" Content="ButtonAdv" Height="50" Label="Les Achats" Margin="7,5,7,0" UseLayoutRounding="True" IconWidth="30" IconHeight="30" Padding="2,0,3,0" BorderThickness="1,1,1,1" SmallIcon="/shopping-bag.png"/>
+                <Syncfusion:ButtonAdv x:Name="btn_show_clients" Content="ButtonAdv" Height="50" Label="Les Clients" Margin="7,5,7,0" UseLayoutRounding="False" IconWidth="30" IconHeight="30" SmallIcon="/rating.png"/>
+                <Syncfusion:ButtonAdv x:Name="btn_show_ventes" Content="ButtonAdv" Height="50" Label="Les Ventes" Margin="7,5,7,0" UseLayoutRounding="False" IconWidth="30" IconHeight="30" SmallIcon="/sales.png"/>
+                <Syncfusion:ButtonAdv x:Name="btn_show_Fournisseurs" Content="ButtonAdv" Height="50" Label="Fournisseurs" UseLayoutRounding="True" IconWidth="30" IconHeight="30" SmallIcon="/teamwork.png" Margin="7,5,7,0"/>
+                <Syncfusion:ButtonAdv x:Name="btn_show_rapports" Content="ButtonAdv" Height="50" Label="Rapports" UseLayoutRounding="False" IconWidth="30" IconHeight="30" SmallIcon="/sale-report.png" Margin="7,5,7,0"/>
+                <Syncfusion:ButtonAdv x:Name="btn_show_utilisateurs" Content="ButtonAdv" Height="50" Label="Utilisateurs" UseLayoutRounding="False" IconWidth="30" IconHeight="30" SmallIcon="/management.png" Margin="7,5,7,0"/>
+                <Syncfusion:ButtonAdv x:Name="btn_show_paramètres" Content="ButtonAdv" Height="50" Label="Paramètres" IsMultiLine="False" UseLayoutRounding="False" IconHeight="30" IconWidth="30" SmallIcon="/cogwheel.png" Margin="7,5,7,0"/>
             </StackPanel>
         </DockPanel>
         <DockPanel x:Name="pnl_topbar" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" LastChildFill="False">
-            <dx:SimpleButton Content="" Width="38" DockPanel.Dock="Right" Margin="0,3,5,3" Glyph="{dx:DXImage SvgImages/RichEdit/CloseHeaderAndFooter.svg}" Height="25" Click="SimpleButton_Click_1"/>
-            <dx:SimpleButton Content="" DockPanel.Dock="Right" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Window.svg}" Width="38" Margin="0,3,5,3" Height="25" Click="SimpleButton_Click"/>
-            <dx:SimpleButton Content="" DockPanel.Dock="Right" Glyph="{dx:DXImage SvgImages/Dashboards/ShowLegendOutsideVerticalBottomLeft.svg}" Width="37" Height="25" Margin="0,3,5,3" Click="SimpleButton_Click_2"/>
-            <dx:SimpleButton Content="" Glyph="{dx:DXImage SvgImages/Business Objects/BO_Notifications.svg}" Width="38" Height="25" DockPanel.Dock="Right" Margin="0,3,25,3"/>
-            <Label Content="Accuiel" FontSize="18" Cursor="None" FontFamily="Cascadia Code" Height="26.917" HorizontalContentAlignment="Center" DockPanel.Dock="Right" VerticalContentAlignment="Center" Margin="0,0,300,0"/>
+            <Syncfusion:ButtonAdv x:Name="btn_close_wind" Content="ButtonAdv" Label="" DockPanel.Dock="Right" Width="38" Height="30" Margin="0,0,9,0" SmallIcon="/close.png" IconWidth="25" IconHeight="25" Click="btn_close_wind_Click"/>
+            <Label Content="Accuiel" FontSize="18" Cursor="None" FontFamily="Cascadia Code" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="83.827" HorizontalAlignment="Left"/>
+            <Syncfusion:ButtonAdv x:Name="btn_min_and_max" Content="ButtonAdv" Label="" DockPanel.Dock="Right" Width="38" Height="30" Margin="0,0,9,0" SmallIcon="/maximize.png" IconWidth="25" IconHeight="22" Click="btn_min_and_max_Click"/>
+            <Syncfusion:ButtonAdv x:Name="btn_hide_wind" Content="ButtonAdv" Label="" DockPanel.Dock="Right" Width="38" Height="30" Margin="0,0,9,0" IconWidth="25" IconHeight="25" SmallIcon="/minus.png" Click="btn_hide_wind_Click"/>
+            <Syncfusion:ButtonAdv Content="ButtonAdv" Label="" DockPanel.Dock="Right" Width="38" Height="30" Margin="0,0,25,0" IconWidth="25" IconHeight="22" SmallIcon="/bell.png"/>
         </DockPanel>
         <DockPanel x:Name="pnl_mini_topbar" LastChildFill="False" Background="#FFE5E5E5" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="280">
             <DockPanel.RenderTransform>
@@ -56,8 +56,8 @@
                     <TranslateTransform Y="-0.431"/>
                 </TransformGroup>
             </DockPanel.RenderTransform>
-            <dx:SimpleButton x:Name="collapse_btn" Content="" Glyph="{dx:DXImage SvgImages/Outlook Inspired/List.svg}" Padding="4,3,3,3" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Width="30" Margin="17,10,0,15" Height="30" Click="SimpleButton_Click_5"/>
-            <Label Content="GestCOM" FontSize="24" Cursor="None" FontFamily="Unispace" FontWeight="DemiBold" FontStyle="Italic" Padding="0,0,0,0" DockPanel.Dock="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="49" Margin="0,7,26,0">
+            <Syncfusion:ButtonAdv x:Name="btn_collapse" Content="ButtonAdv" Label="" SmallIcon="/open-list.png" IconWidth="30" IconHeight="30" Width="40" Height="40" Margin="10,0,0,0" Click="btn_collapse_Click"/>
+            <Label Content="GestCOM" FontSize="24" Cursor="None" FontFamily="Unispace" FontWeight="DemiBold" FontStyle="Italic" Padding="0,0,0,0" DockPanel.Dock="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="49" Margin="0,10,0,0">
                 <Label.Foreground>
                     <RadialGradientBrush>
                         <GradientStop Color="#FF303B45" Offset="0.073"/>
